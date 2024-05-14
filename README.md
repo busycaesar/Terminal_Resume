@@ -1,16 +1,12 @@
-<!-- Remove the following content when using this template for create repo for project! -->
-This repository serves as a template for all my future project repositories. It contains the common structure, configurations, and files that I use across my projects. The purpose of this repository template is to maintain consistency and standardization across my projects. By using this template, I ensure that all my repositories follow a similar structure and setup, making it easier to manage and maintain them.
-
-While this template is primarily for personal use, contributions and suggestions for improvements are always welcome. If you have ideas for enhancing the template or making it more useful, feel free to submit a pull request or open an issue.
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXS -->
-
-# Project Title
+# Terminal Resume
 
 ## Description
 
+This repository hosts my unique terminal-based resume. Instead of a traditional PDF or web-based format, my resume is designed to be accessed directly from the command line using curl. By running a simple curl command followed by the URL of my resume, anyone can instantly view my professional profile, work experience, and education details right in their terminal window. This approach offers a minimalist and convenient way to share my resume, especially for developers and tech-savvy individuals who are comfortable with command-line tools.
+
 ## Tech Stack
 
-<img src="https://skillicons.dev/icons?i=js,ts" />
+<img src="https://skillicons.dev/icons?i=terminal" />
 
 ## How it looks?
 ## Features
