@@ -6,9 +6,20 @@ This repository hosts my unique terminal-based resume. Instead of a traditional 
 
 ## Tech Stack
 
-<img src="https://skillicons.dev/icons?i=cli" />
+<img src="https://skillicons.dev/icons?i=html" />
 
 ## How it looks?
-## Features
+
+![image](https://github.com/busycaesar/Terminal_Resume/assets/97539345/0bf49105-c9b9-40d9-a598-1af4ea259b55)
+
 ## How to run the project?
+
+Use this command on your terminal. (Note: For windows users, replace `curl` with `curl.exe`)
+
+```linux
+curl -L cli.shahtech.info
+```
+
 ## Author
+
+<a href="https://github.com/busycaesar">Dev Shah</a>
