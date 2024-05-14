@@ -6,7 +6,7 @@ This repository hosts my unique terminal-based resume. Instead of a traditional 
 
 ## Tech Stack
 
-<img src="https://skillicons.dev/icons?i=terminal" />
+<img src="https://skillicons.dev/icons?i=cli" />
 
 ## How it looks?
 ## Features
