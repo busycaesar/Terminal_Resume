@@ -76,12 +76,11 @@ contact() {
 }
 
 # Main loop to accept commands
-# Check if the script is running interactively
-if [[ $- == *i* ]]; then
-    # Main loop to accept commands
+if [ -t 0 ]; then
     while true; do
-        echo -n "dev@server > "
-        read cmd
+        echo "Available commands: summary, education, experience, skills, projects, contact, quit"
+        read -p "Enter a command: " cmd
+
         case $cmd in
             help)
                 help
@@ -104,9 +103,8 @@ if [[ $- == *i* ]]; then
             contact)
                 contact
                 ;;
-            exit)
-                echo "Ciao!"
-                echo
+            quit)
+                echo "Goodbye!"
                 break
                 ;;
             *)
@@ -115,6 +113,5 @@ if [[ $- == *i* ]]; then
         esac
     done
 else
-    echo "This script is intended to be run interactively."
-    echo "Please run it in an interactive shell."
+    help
 fi
