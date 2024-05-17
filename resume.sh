@@ -77,6 +77,9 @@ contact() {
 
 # Main loop to accept commands
 if [ -t 0 ]; then
+
+    read -t 0 -n 100000 discard_input
+
     while true; do
         echo "Available commands: summary, education, experience, skills, projects, contact, quit"
         read -p "Enter a command: " cmd
