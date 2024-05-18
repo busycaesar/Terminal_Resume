@@ -76,7 +76,7 @@ contact() {
 }
 
 # Main loop to accept commands
-read -t 0 -n 100000 discard_input
+if [ -t 0 ]; then
 
     while true; do
         echo "Available commands: summary, education, experience, skills, projects, contact, quit"
@@ -112,4 +112,7 @@ read -t 0 -n 100000 discard_input
                 echo "Invalid command. Type 'help' to see the list of available commands."
                 ;;
         esac
-done
+    done
+else
+    help
+fi
