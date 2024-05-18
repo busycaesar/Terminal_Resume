@@ -76,7 +76,7 @@ contact() {
 }
 
 # Main loop to accept commands
-if [ -t 0 ]; then
+if [ $# -eq 0 ]; then
 
     while true; do
         echo "Available commands: summary, education, experience, skills, projects, contact, quit"
@@ -107,9 +107,6 @@ if [ -t 0 ]; then
             quit)
                 echo "Goodbye!"
                 break
-                ;;
-            *)
-                echo "Invalid command. Type 'help' to see the list of available commands."
                 ;;
         esac
     done
