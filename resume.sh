@@ -18,6 +18,7 @@ echo
 
 # Function to display the help message
 help() {
+    echo
     echo "These are all the common commands to help you navigate through my resume."
     echo "  summary     Brief summary about me"
     echo "  education   My educational background"
@@ -27,45 +28,63 @@ help() {
     echo "  blogs       Blogs I've written, project explaination videos."
     echo "  contact     My contact information"
     echo "  exit        Exit the resume"
+    echo
 }
 
 # Function to display the summary
 summary() {
+    echo
+    echo "Summary"
+    echo
     echo "An actively learning and quality-oriented developer, with a keen ability to adapt quickly to new technology, committed to developing optimized, clean, readable, and maintainable code for building a high-quality product. Further, I have experience in communicating with clients, understanding their requirements, delivering the finest as well as accessible solutions. My goal is to learn Full Stack Development along with knowledge in the areas of UI/UX Design and Cloud Computing and DevOps."
+    echo
 }
 
 # Function to display education
 education() {
-    echo "Education:"
+    echo
+    echo "Education"
+    echo
     echo "  Computer Programming and Analysis, Advanced Diploma @Seneca Polytechnic"
     echo "  January 2022 to August 2024"
     echo
     echo "  Electrical Engineering, High School Diploma @The Maharaja Sayajirao University"
     echo "  July 2018 to June 2021"
+    echo
 }
 
 # Function to display work experience
 experience() {
+    echo
     echo "Work Experience:"
+    echo
     echo "  Research Assistant/Web Developer @Seneca Applied Research" 
+    echo "  Part-Time, Contract"
     echo "  January 2024 to present"
     echo
     echo "  Web Developer @Three of Cups"
+    echo "  Freelancing"
     echo "  April 2024 to May 2024"
     echo
     echo "  Lab Assistant @Seneca Polytechnic"
+    echo "  Part-Time, Contract"
     echo "  January 2024 to April 2024"
     echo
     echo "  Senior Developer @Seneca Hackathon"
+    echo "  Volunteering"
     echo "  November 2023 to March 2024"
     echo
     echo "  Junior Web Developer @Toronto District School Board"
+    echo "  Full-Time, Co-op"
     echo "  January 2023 to August 2023"
+    echo
 }
 
 # Function to display skills
 skills() {
+    echo
     echo "Skills:"
+    echo
     echo "  Languages               Javascript, Typescript, C#, Python, Bash Shell Script, Java, C++, C, HTML, YAML, XAML, Markdown, CSS"
     echo "  Technologies            React.js, Next.js, Vite, Node.js, Express.js, Nest.js, Tailwindcss, Bootstrap, MaterialUI"
     echo "  Concepts                OOP, Web Accessibility, JSON, AJAX, REST APIs, JWT, MVC, Regex"
@@ -76,10 +95,12 @@ skills() {
     echo "  Code Editors/IDEs       vim, VS Code, Visual Studio, IntelliJ, Eclipse"
     echo "  Applications            Postman, Vercel, Figma, Adobe Premiere Pro, Discord, Notion, Obsidian"
     echo "  Currently Learning      AWS, Azure"
+    echo
 }
 
 # Function to display projects
 projects() {
+    echo
     echo "Projects:"
     echo
     echo "  IoT Data Management API: A microservices based architecture for managing IoT data using cloud platform and products of AWS, featuring secure authentication with AWS Cognito and automated CI/CD pipelines for robust testing and deployment via GitHub, Docker, and Amazon ECS."
@@ -93,27 +114,36 @@ projects() {
     echo "  Hotel Reservation System: A desktop app for hotel reservation management system, enabling customers to book rooms and providing admins with tools to manage bookings, generate receipts, and oversee customer reservations."
     echo "  Tech Stack: Java, JavaFx, SQLite"
     echo "  Link: https://github.com/busycaesar/Hotel_Reservation_System"
+    echo
 }
 
 # Function to display contact information
 contact() {
+    echo
     echo "Contact Information:"
+    echo
     echo "  Email: busycaesar@gmail.com"
     echo "  LinkedIn: https://www.linkedin.com/in/busycaesar/"
     echo "  GitHub: https://github.com/busycaesar"
+    echo
 }
 
 # Function to display blogs information
 blogs() {
+    echo
     echo "Blogs:"
+    echo
     echo "  Dev.to:  https://dev.to/busycaesar"
     echo "  YouTube: https://www.youtube.com/@_devshah"
+    echo
 }
+
+domain="bash.shahtech.info"
 
 exit_resume() {
     echo "logout"
-    echo "Connection to cli.shahtech.info closed."
-    echo "Adios, ${username:='dev'}"
+    echo "Connection to $domain closed."
+    echo "Adios, ${username:='buddy'}!"
     exit 0
 }
 
@@ -125,11 +155,9 @@ echo "Please enter commands to navigate through the resume."
 echo "Use 'help' to see the list of available commands."
 echo
 
-new_session=1
-
 while true;
 do
-    read -p "$username@cli.shahtech.info:~$ " command
+    read -p "$username@$domain:~$ " command
 
     case $command in
         summary)
@@ -157,7 +185,7 @@ do
             clear
             ;;
         exit)
-            exit
+            exit_resume
             ;;
         *)
             help
