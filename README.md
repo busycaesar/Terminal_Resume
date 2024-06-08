@@ -6,8 +6,8 @@ This repository hosts my unique terminal-based resumes. Instead of a traditional
 
 ## Index
 
-1. [Static Content](https://github.com/busycaesar/Terminal_Resume/static)
-2. [Interactive Shell](https://github.com/busycaesar/Terminal_Resume/interactive)
+1. [Static Content](https://github.com/busycaesar/Terminal_Resume/tree/Master/static)
+2. [Interactive Shell](https://github.com/busycaesar/Terminal_Resume/tree/Master/interactive)
 
 ## Author
 
