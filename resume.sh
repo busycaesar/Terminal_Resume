@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Display welcome message
 echo
@@ -31,23 +31,29 @@ help() {
 
 # Function to display the summary
 summary() {
-    echo "Summary: [Your brief summary here]"
+    echo
+    echo "An actively learning and quality-oriented developer, with a keen ability to adapt quickly to new technology, committed to developing optimized, clean, readable, and maintainable code for building a high-quality product. Further, I have experience in communicating with clients, understanding their requirements, delivering the finest as well as accessible solutions. My goal is to learn Full Stack Development along with knowledge in the areas of UI/UX Design and Cloud Computing and DevOps."
+    echo
 }
 
 # Function to display education
 education() {
+    echo
     echo "Education:"
-    echo "  - [Degree], [Institution], [Year]"
-    echo "  - [Degree], [Institution], [Year]"
+    echo "- Advanced Diploma, Computer Programming and Analysis, Seneca Polytechnic"
+    echo "- High School Diploma, Electrical Engineering, The Maharaja Sayajirao University of Baroda"
+    echo
 }
 
 # Function to display work experience
 experience() {
+    echo
     echo "Work Experience:"
     echo "  - [Job Title], [Company], [Years]"
     echo "    [Description of responsibilities and achievements]"
     echo "  - [Job Title], [Company], [Years]"
     echo "    [Description of responsibilities and achievements]"
+    echo
 }
 
 # Function to display skills
@@ -75,41 +81,68 @@ contact() {
     echo "  - GitHub: [your GitHub profile]"
 }
 
-# Main loop to accept commands
-if [ $# -eq 0 ]; then
+read -p "Enter username: " username
 
-    while true; do
-        echo "Available commands: summary, education, experience, skills, projects, contact, quit"
-        read -p "Enter a command: " cmd
+echo
+echo "Welcome $username,"
+echo
 
-        case $cmd in
-            help)
-                help
-                ;;
-            summary)
-                summary
-                ;;
-            education)
-                education
-                ;;
-            experience)
-                experience
-                ;;
-            skills)
-                skills
-                ;;
-            projects)
-                projects
-                ;;
-            contact)
-                contact
-                ;;
-            quit)
-                echo "Goodbye!"
-                break
-                ;;
-        esac
-    done
-else
-    help
-fi
+new_session=1
+
+while [ $new_session -eq 1 ];
+do
+    read -p "$username@shahtech.info:~$ " command
+
+    case $command in
+        summary)
+            summary
+            ;;
+        help)
+            help
+            ;;
+        exit)
+            echo "Adios, $username!"
+            echo
+            new_session=0
+            break;
+    esac
+done
+
+# # Main loop to accept commands
+# if [ $# -eq 0 ]; then
+
+#     while true; do
+#         echo "Available commands: summary, education, experience, skills, projects, contact, quit"
+#         read -p "Enter a command: " cmd
+
+#         case $cmd in
+#             help)
+#                 help
+#                 ;;
+#             summary)
+#                 summary
+#                 ;;
+#             education)
+#                 education
+#                 ;;
+#             experience)
+#                 experience
+#                 ;;
+#             skills)
+#                 skills
+#                 ;;
+#             projects)
+#                 projects
+#                 ;;
+#             contact)
+#                 contact
+#                 ;;
+#             quit)
+#                 echo "Goodbye!"
+#                 break
+#                 ;;
+#         esac
+#     done
+# else
+#     help
+# fi
