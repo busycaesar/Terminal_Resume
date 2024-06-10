@@ -1,0 +1,166 @@
+{
+  "basics": {
+    "name": "Dev Shah",
+    "label": "Developer",
+    "image": "",
+    "email": "busycaesar@gmail.com",
+    "phone": "+1(647)877-0278",
+    "url": "https://shahtech.info",
+    "location": {
+      "city": "Toronto",
+      "countryCode": "CA",
+      "region": "Ontario"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "busycaesar",
+        "url": "https://twitter.com/busycaesar"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "busycaesar",
+        "url": "https://www.linkedin.com/in/busycaesar"
+      },
+      {
+        "network": "GitHub",
+        "username": "busycaesar",
+        "url": "https://github.com/busycaesar"
+      },
+      {
+        "network": "Dev Community",
+        "username": "busycaesar",
+        "url": "https://dev.to/busycaesar"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Seneca Applied Research",
+      "position": "Research Assistant/Web Developer",
+      "startDate": "January 2024",
+      "endDate": "present",
+      "summary": "Description…"
+    },
+    {
+      "name": "Three of Cups",
+      "position": "Web Developer",
+      "startDate": "April 2024",
+      "endDate": "May 2024",
+      "summary": "Description…"
+    },
+    {
+      "name": "Seneca Hackathon",
+      "position": "Senior Developer",
+      "startDate": "November 2023",
+      "endDate": "March 2024",
+      "summary": "Description…"
+    },
+    {
+      "name": "Toronto District School Board",
+      "position": "Junior Web Developer",
+      "startDate": "January 2023",
+      "endDate": "August 2023",
+      "summary": "Description…"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Seneca Polytechnic",
+      "area": "Computer Programming and Analysis",
+      "studyType": "Advanced Diploma",
+      "startDate": "January 2022",
+      "endDate": "August 2024"
+    },
+    {
+      "institution": "The Maharaja Sayajirao University of Baroda",
+      "area": "Electrical Engineering",
+      "studyType": "High School Diploma",
+      "startDate": "July 2018",
+      "endDate": "June 2021"
+    }
+  ],
+  "awards": [
+    {
+      "title": "President's Honor List",
+      "awarder": "Seneca Polytechnic",
+      "summary": "Winter 2024, 4/4 GPA"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "C#",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "BASH Shell Script",
+        "Java",
+        "C++",
+        "C",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "name": "Technologies",
+      "keywords": [
+        "MERN Stack",
+        "Next.js",
+        "Nest.js",
+        "MongoDB",
+        "SQL",
+        "PostgreSQL",
+        "Firebase",
+        "Git",
+        "GitHub",
+        "Docker",
+        "Jest",
+        "GitHub Actions",
+        "Tailwindcss",
+        "Bootstrap",
+        "MaterialUI"
+      ]
+    },
+    {
+      "name": "Concepts",
+      "keywords": [
+        "OOP",
+        "XML",
+        "AJAX",
+        "JSON",
+        "RESTful APIs",
+        "JWT",
+        "MVC",
+        "Web Accessibility"
+      ]
+    },
+    {
+      "name": "Applications",
+      "keywords": [
+        "Windows",
+        "Linux",
+        "VS Code",
+        "vim",
+        "Vercel",
+        "Postman",
+        "Figma",
+        "Visual Paradigm",
+        "Discord"
+      ]
+    },
+    {
+      "name": "Currently Learning",
+      "keywords": ["Cloud Computing"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project",
+      "url": "https://project.com/",
+      "techstack": "Description...",
+      "summary": ""
+    }
+  ]
+}
