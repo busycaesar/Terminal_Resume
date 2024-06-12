@@ -4,6 +4,10 @@
 
 This offers an interactive experience akin to a Linux terminal. Users can fetch the script using curl and then run it with bash, gaining access to a command-line interface where they can execute commands to explore the my professional background. This includes details on education, work experience, skills, projects, and contact information, providing an engaging and intuitive way to access comprehensive information about me.
 
+## Video Explanation
+
+[![Watch the video](https://img.youtube.com/vi/XKVK1qRHQG8/0.jpg)](https://www.youtube.com/watch?v=XKVK1qRHQG8)
+
 ## Tech Stack
 
 ![image](https://skillicons.dev/icons?i=bash)
