@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+# Variables.
+domain="bash.shahtech.info"
+ai_content_key="011d3b82-f9ad-4705-8122-a707858455a6"
+ai_domain="http://localhost:8080"
+
 # Call the function to start the procedure to close the server
 trap exit_resume SIGINT
 
@@ -20,6 +25,8 @@ echo
 help() {
     echo
     echo "These are all the common commands to help you navigate through my resume."
+    echo "  dev         Prompt AI to get my information"
+    echo "   usage dev Where does dev current work at?"
     echo "  summary     Brief summary about me"
     echo "  education   My educational background"
     echo "  experience  My work experience"
@@ -31,12 +38,43 @@ help() {
     echo
 }
 
+# Function to prompt AI a question.
+dev() {
+    # Get the question of the user.
+    question="$1"
+
+    # Make sure all the required data is received.
+    if [ -z "$question" ];
+    then
+        echo
+        echo "You need to provide a question!"
+        echo "Usage: dev Where does dev current work at?"
+        echo
+        return
+    fi
+
+    # Use jq to properly escape the question, but remove the extra quotes
+    question=$(printf '%s' "$question" | jq -Rs '.')
+
+    # Strip the extra quotes added by jq
+    question=$(echo "$question" | sed 's/^"//;s/"$//')
+
+    # Use curl to make a POST request
+    response=$(curl -s -X POST "$ai_domain/api/prompt/$ai_content_key" \
+        -H "Content-Type: application/json" \
+        -d "{\"prompt\": \"$question\"}" | jq -r '.body.response')
+
+    echo
+    echo "Answer: $response"
+    echo
+}
+
 # Function to display the summary
 summary() {
     echo
     echo "Summary"
     echo
-    echo "An actively learning and quality-oriented developer, with a keen ability to adapt quickly to new technology, committed to developing optimized, clean, readable, and maintainable code for building a high-quality product. Further, I have experience in communicating with clients, understanding their requirements, delivering the finest as well as accessible solutions. My goal is to learn Full Stack Development along with knowledge in the areas of UI/UX Design and Cloud Computing and DevOps."
+    echo "An actively learning and quality-oriented developer, with a keen ability to adapt quickly to new technology, committed to developing optimized, clean, readable, and maintainable code for building a high-quality product. Further, I have experience in communicating with clients, understanding their requirements, delivering the finest as well as accessible solutions."
     echo
 }
 
@@ -60,7 +98,7 @@ experience() {
     echo
     echo "  Research Assistant/Web Developer @Seneca Applied Research" 
     echo "  Part-Time, Contract"
-    echo "  January 2024 to present"
+    echo "  January 2024 to Present"
     echo
     echo "  Web Developer @Three of Cups"
     echo "  Freelancing"
@@ -138,8 +176,6 @@ blogs() {
     echo
 }
 
-domain="bash.shahtech.info"
-
 exit_resume() {
     echo "logout"
     echo "Connection to $domain closed."
@@ -157,9 +193,16 @@ echo
 
 while true;
 do
-    read -p "$username@$domain:~$ " command
+    read -p "$username@$domain:~$ " input
+
+    # Split the input into the command and the rest of the arguments
+    command=$(echo "$input" | awk '{print $1}')
+    args=$(echo "$input" | cut -d' ' -f2-)
 
     case $command in
+        dev)
+            dev "$args"
+            ;;
         summary)
             summary
             ;;
