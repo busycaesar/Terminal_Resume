@@ -25,14 +25,12 @@ echo
 help() {
     echo
     echo "These are all the common commands to help you navigate through my resume."
-    echo "  dev         Prompt AI to get my information"
-    echo "   usage dev Where does dev current work at?"
     echo "  summary     Brief summary about me"
     echo "  education   My educational background"
     echo "  experience  My work experience"
     echo "  skills      My skills"
     echo "  projects    Projects I've worked on"
-    echo "  blogs       Blogs I've written, project explaination videos."
+    echo "  content     Content I've created, blogs and videos."
     echo "  contact     My contact information"
     echo "  exit        Exit the resume"
     echo
@@ -84,10 +82,10 @@ education() {
     echo "Education"
     echo
     echo "  Computer Programming and Analysis, Advanced Diploma @Seneca Polytechnic"
-    echo "  January 2022 to August 2024"
+    echo "  Graduation: August 2024"
     echo
-    echo "  Electrical Engineering, High School Diploma @The Maharaja Sayajirao University"
-    echo "  July 2018 to June 2021"
+    echo "  Electrical Engineering, Diploma @The Maharaja Sayajirao University of Baroda"
+    echo "  Graduation: June 2021"
     echo
 }
 
@@ -97,7 +95,7 @@ experience() {
     echo "Work Experience:"
     echo
     echo "  Research Assistant/Web Developer @Seneca Applied Research" 
-    echo "  Part-Time, Contract"
+    echo "  Full-Time, Contract"
     echo "  January 2024 to Present"
     echo
     echo "  Web Developer @Three of Cups"
@@ -123,16 +121,16 @@ skills() {
     echo
     echo "Skills:"
     echo
-    echo "  Languages               Javascript, Typescript, C#, Python, Bash Shell Script, Java, C++, C, HTML, YAML, XAML, Markdown, CSS"
-    echo "  Technologies            React.js, Next.js, Vite, Node.js, Express.js, Nest.js, Tailwindcss, Bootstrap, MaterialUI"
-    echo "  Concepts                OOP, Web Accessibility, JSON, AJAX, REST APIs, JWT, MVC, Regex"
-    echo "  CI/CD                   Jest, Docker, Docker Compose, GitHub Actions, DockerHub"
+    echo "  Languages               JavaScript, TypeScript, Python, C#, Bash, Java, C++, C, HTML, CSS"
+    echo "  Technologies            Node.js, Express.js, React.js, Next.js, Angular, Git, GitHub, Docker, Jest, GitHub Actions"
+    echo "  Concepts                OOP, XML, AJAX, JSON, RESTful APIs, JWT, CI/CD, MVC, Web Accessibility"
+    echo "  CI/CD                   Unit testing, Docker, Docker Compose, GitHub Actions, DockerHub"
     echo "  Database                MongoDB, PostgreSQL, SQLite, Redis, Firebase"
     echo "  Version Control Systems Git, GitHub"
     echo "  Operating Systems       Unix/Linux, Ubuntu, Windows"
     echo "  Code Editors/IDEs       vim, VS Code, Visual Studio, IntelliJ, Eclipse"
     echo "  Applications            Postman, Vercel, Figma, Adobe Premiere Pro, Discord, Notion, Obsidian"
-    echo "  Currently Learning      AWS, Azure"
+    echo "  Currently Learning      LangChain, Vector Databases, LLMs, GenAI"
     echo
 }
 
@@ -141,17 +139,19 @@ projects() {
     echo
     echo "Projects:"
     echo
-    echo "  IoT Data Management API: A microservices based architecture for managing IoT data using cloud platform and products of AWS, featuring secure authentication with AWS Cognito and automated CI/CD pipelines for robust testing and deployment via GitHub, Docker, and Amazon ECS."
-    echo "  Tech Stack: Node.js, Express.js, jest, Docker, DockerHub, AWS Cognito, EC2 Instance, ECR, S3 bucket, DynamoDB"
-    echo "  Link: https://github.com/busycaesar/IoT_Data_Management_API"
+    echo "  Content Driven LLM APIs: A RAG App built with Node.js, Express.js, and Docker, providing APIs for content submission and LLM-based response generation, saving developers 90% of the time and eliminating knowledge-based AI service costs."
+    echo "  Link: https://github.com/busycaesar/Content_Driven_LLM_APIs"
     echo
-    echo "  Metropolitan Museum: A full-stack web application for the Metropolitan Museum featuring secure JWT authentication, advanced artifact search, favorites management, and persistent user search history."
-    echo "  Tech Stack: Next.js, Jotai, Node.js, Express.js, JWT, MongoDB"
-    echo "  Link: https://github.com/busycaesar/Metropolitan_Museum"
+    echo "  Introductory AWS Cloud Project: A cloud-based microservice using AWS, featuring secure authentication with AWS Cognito and CI/CD pipelines for robust testing and deployment via GitHub Actions, Docker, and Amazon ECS."
+    echo "  Link: https://github.com/busycaesar/Introductory_AWS_Cloud_Project"
     echo
-    echo "  Hotel Reservation System: A desktop app for hotel reservation management system, enabling customers to book rooms and providing admins with tools to manage bookings, generate receipts, and oversee customer reservations."
-    echo "  Tech Stack: Java, JavaFx, SQLite"
-    echo "  Link: https://github.com/busycaesar/Hotel_Reservation_System"
+    echo "  Azure Load Balancer Setup: A project showcasing load balancing for websites using Microsoft Azure services, including VMs, Virtual Networks, Load Balancer, and Private DNS."
+    echo
+    echo "  Link: https://www.youtube.com/watch?v=t93d8ieZn0Q"
+    echo
+    echo "  Auth APIs: A web service built using Node.js and PostgreSQL, that streamlines authentication by providing secure user management and JWT handling endpoints, reducing development time by 10%."
+    echo
+    echo "  Link: https://github.com/busycaesar/Auth_APIs"
     echo
 }
 
@@ -160,16 +160,17 @@ contact() {
     echo
     echo "Contact Information:"
     echo
-    echo "  Email: busycaesar@gmail.com"
+    echo "  Email:    dev-jshah@outlook.com"
     echo "  LinkedIn: https://www.linkedin.com/in/busycaesar/"
-    echo "  GitHub: https://github.com/busycaesar"
+    echo "  GitHub:   https://github.com/busycaesar"
+    echo "  Twitter:  https://x.com/busycaesar"
     echo
 }
 
 # Function to display blogs information
-blogs() {
+content() {
     echo
-    echo "Blogs:"
+    echo "Content:"
     echo
     echo "  Dev.to:  https://dev.to/busycaesar"
     echo "  YouTube: https://www.youtube.com/@_devshah"
@@ -200,9 +201,6 @@ do
     args=$(echo "$input" | cut -d' ' -f2-)
 
     case $command in
-        dev)
-            dev "$args"
-            ;;
         summary)
             summary
             ;;
@@ -221,8 +219,8 @@ do
         contact)
             contact
             ;;
-        blogs)
-            blogs
+        content)
+            content
             ;;
         clear)
             clear
