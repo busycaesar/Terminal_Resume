@@ -2,7 +2,7 @@
 
 # Variables.
 domain="bash.shahtech.info"
-ai_content_key="011d3b82-f9ad-4705-8122-a707858455a6"
+ai_content_key="17eb20d4-3b0d-4929-912a-a12f1468af72"
 ai_domain="http://localhost:8080"
 
 # Call the function to start the procedure to close the server
@@ -25,6 +25,8 @@ echo
 help() {
     echo
     echo "These are all the common commands to help you navigate through my resume."
+    echo "  dev         Prompt AI to get my information"
+    echo "   usage dev Where does dev current work at?"
     echo "  summary     Brief summary about me"
     echo "  education   My educational background"
     echo "  experience  My work experience"
@@ -201,6 +203,9 @@ do
     args=$(echo "$input" | cut -d' ' -f2-)
 
     case $command in
+        dev)
+            dev "$args"
+            ;;
         summary)
             summary
             ;;
