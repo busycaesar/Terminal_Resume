@@ -94,12 +94,12 @@ experience() {
     echo
     echo "Work Experience:"
     echo
-    echo "  Research Assistant/Web Developer @Seneca Applied Research" 
+    echo "  Software Developer @Seneca Applied Research" 
     echo "  Full-Time, Contract"
     echo "  January 2024 to Present"
     echo
-    echo "  Web Developer @Three of Cups"
-    echo "  Freelancing"
+    echo "  Web Developer Intern @Three of Cups"
+    echo "  Internship"
     echo "  April 2024 to May 2024"
     echo
     echo "  Lab Assistant @Seneca Polytechnic"
@@ -121,8 +121,8 @@ skills() {
     echo
     echo "Skills:"
     echo
-    echo "  Languages               JavaScript, TypeScript, Python, C#, Bash, Java, C++, C, HTML, CSS"
-    echo "  Technologies            Node.js, Express.js, React.js, Next.js, Angular, Git, GitHub, Docker, Jest, GitHub Actions"
+    echo "  Languages               Python, JavaScript, TypeScript, C#, Bash, Java, C++, C, HTML, CSS"
+    echo "  Technologies            Flask, Node.js, Express.js, React.js, Next.js, Angular, Git, GitHub, Docker, Jest, GitHub Actions"
     echo "  Concepts                OOP, XML, AJAX, JSON, RESTful APIs, JWT, CI/CD, MVC, Web Accessibility"
     echo "  CI/CD                   Unit testing, Docker, Docker Compose, GitHub Actions, DockerHub"
     echo "  Database                MongoDB, PostgreSQL, SQLite, Redis, Firebase"
@@ -146,11 +146,9 @@ projects() {
     echo "  Link: https://github.com/busycaesar/Introductory_AWS_Cloud_Project"
     echo
     echo "  Azure Load Balancer Setup: A project showcasing load balancing for websites using Microsoft Azure services, including VMs, Virtual Networks, Load Balancer, and Private DNS."
-    echo
     echo "  Link: https://www.youtube.com/watch?v=t93d8ieZn0Q"
     echo
     echo "  Auth APIs: A web service built using Node.js and PostgreSQL, that streamlines authentication by providing secure user management and JWT handling endpoints, reducing development time by 10%."
-    echo
     echo "  Link: https://github.com/busycaesar/Auth_APIs"
     echo
 }
@@ -161,8 +159,9 @@ contact() {
     echo "Contact Information:"
     echo
     echo "  Email:    dev-jshah@outlook.com"
-    echo "  LinkedIn: https://www.linkedin.com/in/busycaesar/"
+    echo "  Website:  https://shahtech.info"
     echo "  GitHub:   https://github.com/busycaesar"
+    echo "  LinkedIn: https://www.linkedin.com/in/busycaesar"
     echo "  Twitter:  https://x.com/busycaesar"
     echo
 }
