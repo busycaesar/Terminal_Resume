@@ -2,8 +2,6 @@
 
 # Variables.
 domain="bash.shahtech.info"
-ai_content_key="011d3b82-f9ad-4705-8122-a707858455a6"
-ai_domain="http://localhost:8080"
 
 # Call the function to start the procedure to close the server
 trap exit_resume SIGINT
@@ -25,47 +23,49 @@ echo
 help() {
     echo
     echo "These are all the common commands to help you navigate through my resume."
-    echo "  summary     Brief summary about me"
-    echo "  education   My educational background"
-    echo "  experience  My work experience"
-    echo "  skills      My skills"
-    echo "  projects    Projects I've worked on"
-    echo "  content     Content I've created, blogs and videos."
-    echo "  contact     My contact information"
-    echo "  exit        Exit the resume"
+    echo "  summary      Brief summary about me"
+    echo "  education    My educational background"
+    echo "  experience   My work experience"
+    echo "  skills       My skills"
+    echo "  projects     Projects I've worked on"
+    echo "  content      Content I've created, blogs and videos."
+    echo "  contact      My contact information"
+    echo "  certificates My certificates"
+    echo "  notes        My notes"
+    echo "  exit         Exit the resume"
     echo
 }
 
-# Function to prompt AI a question.
-dev() {
-    # Get the question of the user.
-    question="$1"
+# # Function to prompt AI a question.
+# dev() {
+#     # Get the question of the user.
+#     question="$1"
 
-    # Make sure all the required data is received.
-    if [ -z "$question" ];
-    then
-        echo
-        echo "You need to provide a question!"
-        echo "Usage: dev Where does dev current work at?"
-        echo
-        return
-    fi
+#     # Make sure all the required data is received.
+#     if [ -z "$question" ];
+#     then
+#         echo
+#         echo "You need to provide a question!"
+#         echo "Usage: dev Where does dev current work at?"
+#         echo
+#         return
+#     fi
 
-    # Use jq to properly escape the question, but remove the extra quotes
-    question=$(printf '%s' "$question" | jq -Rs '.')
+#     # Use jq to properly escape the question, but remove the extra quotes
+#     question=$(printf '%s' "$question" | jq -Rs '.')
 
-    # Strip the extra quotes added by jq
-    question=$(echo "$question" | sed 's/^"//;s/"$//')
+#     # Strip the extra quotes added by jq
+#     question=$(echo "$question" | sed 's/^"//;s/"$//')
 
-    # Use curl to make a POST request
-    response=$(curl -s -X POST "$ai_domain/api/prompt/$ai_content_key" \
-        -H "Content-Type: application/json" \
-        -d "{\"prompt\": \"$question\"}" | jq -r '.body.response')
+#     # Use curl to make a POST request
+#     response=$(curl -s -X POST "$ai_domain/api/prompt/$ai_content_key" \
+#         -H "Content-Type: application/json" \
+#         -d "{\"prompt\": \"$question\"}" | jq -r '.body.response')
 
-    echo
-    echo "Answer: $response"
-    echo
-}
+#     echo
+#     echo "Answer: $response"
+#     echo
+# }
 
 # Function to display the summary
 summary() {
@@ -94,9 +94,17 @@ experience() {
     echo
     echo "Work Experience:"
     echo
+    echo "  Agile Software Engineer @TribalScale" 
+    echo "  Full-Time, Permanent"
+    echo "  June 2025 to Present"
+    echo
+    echo "  Full-stack Developer @Three Of Cups" 
+    echo "  Freelance"
+    echo "  December 2024 to June 2025"
+    echo
     echo "  Software Developer @Seneca Applied Research" 
     echo "  Full-Time, Contract"
-    echo "  January 2024 to Present"
+    echo "  January 2024 to October 2024"
     echo
     echo "  Web Developer Intern @Three of Cups"
     echo "  Internship"
@@ -171,8 +179,41 @@ content() {
     echo
     echo "Content:"
     echo
-    echo "  Dev.to:  https://dev.to/busycaesar"
-    echo "  YouTube: https://www.youtube.com/@_devshah"
+    echo "  Dev.to:    https://dev.to/busycaesar"
+    echo "  YouTube:   https://www.youtube.com/@busycaesar"
+    echo "  Instagram: https://instagram.com/busycaesar"
+    echo
+}
+
+# Function to display certificates information
+certificates() {
+    echo
+    echo "Certificates:"
+    echo
+    echo "  Generative AI Leader:                       https://www.credly.com/earner/earned/badge/11e20051-d8b9-4520-8906-9d90dcd0db40"
+    echo "  Microsoft Certified, Azure AI Fundamentals: https://learn.microsoft.com/en-us/users/busycaesar/credentials/e484210d8c19cdc9"
+    echo
+}
+
+# Function to display notes information
+notes() {             
+    echo
+    echo "Notes:"
+    echo
+    echo "  SAA-C03:        https://saa-c03.shahtech.info"
+    echo "  Notes for AWS Certified Solutions Architect - Associate"
+    echo
+    echo "  AI 900:         https://ai900.shahtech.info"
+    echo "  Notes for Microsoft Certified: Azure AI Fundamentals"
+    echo
+    echo "  AI Model Terms: https://aimodelterms.shahtech.info"
+    echo "  A curated list of AI-related terms with explanations based on research papers and books."
+    echo 
+    echo "  Harvard CS50AI: https://cs50ai.shahtech.info"
+    echo "  Notes and insights from Harvard CS50's Introduction to Artificial Intelligence with Python."
+    echo
+    echo "  AZ 900:         https://az900.shahtech.info"
+    echo "  Notes for Microsoft Certified: Azure Fundamentals"
     echo
 }
 
@@ -215,11 +256,17 @@ do
         education)
             education
             ;;
+        certificates)
+            certificates
+            ;;
         contact)
             contact
             ;;
         content)
             content
+            ;;
+        notes)
+            notes
             ;;
         clear)
             clear
