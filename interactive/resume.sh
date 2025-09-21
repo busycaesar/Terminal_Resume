@@ -200,10 +200,10 @@ notes() {
     echo
     echo "Notes:"
     echo
-    echo "  SAA-C03:        https://saa-c03.shahtech.info"
+    echo "  SAA-C03: https://saa-c03.shahtech.info"
     echo "  Notes for AWS Certified Solutions Architect - Associate"
     echo
-    echo "  AI 900:         https://ai900.shahtech.info"
+    echo "  AI 900: https://ai900.shahtech.info"
     echo "  Notes for Microsoft Certified: Azure AI Fundamentals"
     echo
     echo "  AI Model Terms: https://aimodelterms.shahtech.info"
@@ -212,7 +212,7 @@ notes() {
     echo "  Harvard CS50AI: https://cs50ai.shahtech.info"
     echo "  Notes and insights from Harvard CS50's Introduction to Artificial Intelligence with Python."
     echo
-    echo "  AZ 900:         https://az900.shahtech.info"
+    echo "  AZ 900: https://az900.shahtech.info"
     echo "  Notes for Microsoft Certified: Azure Fundamentals"
     echo
 }
